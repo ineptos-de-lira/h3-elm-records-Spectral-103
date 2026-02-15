@@ -42,6 +42,7 @@ users =
     ]
 
 
+onlyStudents : List User -> List String
 onlyStudents lista =
     List.map
         (\user ->
