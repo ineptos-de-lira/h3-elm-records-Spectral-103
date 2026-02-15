@@ -3,8 +3,23 @@ module Helper exposing (..)
 import Html exposing (Html, div, h1, li, text, ul)
 
 
+add2 : Int -> Int -> Int
+add2 int1 int2 =
+    int1 + int2
 
--- Ejercicio 1
+
+add3 : Float -> Float -> Float -> Float
+add3 float1 float2 float3 =
+    float1 + float2 + float3
+
+
+calc : Int -> Int -> (Int -> Int -> Int) -> Int
+calc int1 int2 operator =
+    operator int1 int2
+
+
+
+-- ejercicio 1
 
 
 langs : List { name : String, releaseYear : Int, currentVersion : String }
@@ -26,7 +41,7 @@ languageNames list =
 
 
 
--- Ejercicio 2
+-- ejercicio 2
 
 
 type alias User =
@@ -56,7 +71,7 @@ onlyStudents lista =
 
 
 
--- Ejercicio 3
+-- ejercicio 3
 
 
 type alias Videogame =
@@ -91,7 +106,7 @@ getVideogameGenres listaDeJuegos =
 
 
 
--- Ejercicio HTML
+-- html
 
 
 type alias Computer =
@@ -105,7 +120,7 @@ type alias Computer =
 myLaptop : Computer
 myLaptop =
     { ram = "16GB"
-    , model = "P15"
+    , model = "XPS 15"
     , brand = "Huawei"
     , screenSize = "15 pulgadas"
     }
